@@ -46,6 +46,8 @@ NOTE: Based on your Python ALIS you may have to use `python` or `python3` to run
 To test the application by hitting the API endpoints directly without a presentation layer,
 - `http://localhost:8000/process_orders/` with key as `tsv_data` and the value will be the TSV data the user sends.
 
+**NOTE**
+- The request should have tsv_data as part of the body - form-data
 The response will be in the format of 
 ```json
 {
