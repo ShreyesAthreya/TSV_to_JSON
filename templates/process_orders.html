@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="">
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"/>
+    <title>Process Order</title>
+</head>
+<body>
+<form id="tsv-form" method="post" action="{% url 'process_orders' %}">
+    {{ form.as_p }}
+    <input type="hidden" id="tsv_data" name="tsv_data">
+    <button type="submit" id="submit-button" disabled='true'>Enter Data</button>
+</form>
+
+<script src="{% static 'process_order.js' %}"></script>
+</body>
+</html>

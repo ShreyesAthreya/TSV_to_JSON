@@ -127,3 +127,31 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Python bytecode files
+*.pyc
+
+# Vagrant files
+.vagrant/
+
+# Virtual environment
+env/
+
+# Database file
+db.sqlite3
+
+# Local settings
+local_settings.py
+
+# Secret key
+secret_key.py
+
+# Log files
+*.log
+
+# IDE files
+*.idea
+
+# Django secret key
+secret_key.py

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"/>
+</head>
+<body>
+<form id="tsv-form" method="get" action="{% url 'get_orders' %}">
+    <label for="tsv-data">TSV Content:</label>
+    <textarea id="text-input"></textarea>
+    <br>
+    <br>
+    <button type="submit" id="submit-button">Submit</button>
+    <input type="hidden" id="pk" name="pk" value="1">
+</form>
+
+<div id="my-modal" class="modal" style="display: block">
+    <div class="modal-content">
+        <span class="close-button" id="close-btn">x</span>
+        <label for="text-input-results">JSON Result:</label>
+        <textarea id="text-input-results">{% if data %} {{ data }} {% endif %}</textarea>
+        <br>
+        <label for="text-input-errors">Parsing errors:</label>
+        <textarea id="text-input-errors">{% if errors %} {{ errors }} {% endif %}</textarea>
+        <button type="button" id="copy-button">Copy</button>
+        <p id="modal-text"></p>
+        <input type="hidden" id="record_id" name="record_id" value="{{ id }}">
+    </div>
+</div>
+
+<script src="{% static 'get_orders.js' %}"></script>
+</body>
+</html>
