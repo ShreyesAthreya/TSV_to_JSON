@@ -1,4 +1,4 @@
-# Order Processing System\*\*
+# Order Processing System
 
 This is a Django application that allows users to process orders in TSV format.
 
@@ -10,11 +10,15 @@ Creates a dictionary with the customer name as the key, and the values being the
 If there are any errors, they are added to a list
 The data and error responses are returned in a serialized format through a REST API
 
+### Dependency version used during build
+- python=3.10
+- django=4.1
+- djangorestframework=3.14
 ## Prerequisites
 
 - Python 3.x
-- Django 3.x
-- Django REST framework
+- Django 3.x and above
+- Django REST Framework
 
 ### Getting started
 
