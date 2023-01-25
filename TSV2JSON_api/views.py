@@ -136,7 +136,7 @@ class OrderViewSet(viewsets.ViewSet):
             return render(request, 'get_orders.html', {'id': pk, 'data': formatted_json, 'errors': formatted_errors})
         else:
             if not pk:
-                return Response(data_responses)
+                return Response({'size': len(data_responses), 'data': data_responses, 'errors': errors_response})
             try:
                 index = int(pk) - 1
                 return Response(
